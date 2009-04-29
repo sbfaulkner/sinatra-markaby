@@ -13,8 +13,8 @@ class SinatraMarkabyTest < Test::Unit::TestCase
 
   def test_renders_inline_strings
     markaby_app { markaby 'mab.p "Hello shrimp!"' }
-    assert ok?
-    assert_equal "<p>Hello shrimp!</p>", body
+    assert last_response.ok?
+    assert_equal "<p>Hello shrimp!</p>", last_response.body
   end
 
   def test_renders_inline_blocks
@@ -24,8 +24,8 @@ class SinatraMarkabyTest < Test::Unit::TestCase
         mab.p "Hello #{@name}!"
       end
     }
-    assert ok?
-    assert_equal "<p>Hello Frank &amp; Mary!</p>", body
+    assert last_response.ok?
+    assert_equal "<p>Hello Frank &amp; Mary!</p>", last_response.body
   end
 
   def test_renders_markaby_files_in_views_path
@@ -33,8 +33,8 @@ class SinatraMarkabyTest < Test::Unit::TestCase
       @name = "World"
       markaby :hello
     }
-    assert ok?
-    assert_equal "<p>Hello, World!</p>", body
+    assert last_response.ok?
+    assert_equal "<p>Hello, World!</p>", last_response.body
   end
 
   def test_renders_in_file_template
@@ -42,8 +42,8 @@ class SinatraMarkabyTest < Test::Unit::TestCase
       @name = "Joe"
       markaby :in_file
     }
-    assert ok?
-    assert_equal "<p>Hey Joe</p>", body
+    assert last_response.ok?
+    assert_equal "<p>Hey Joe</p>", last_response.body
   end
 
   def test_raises_error_if_template_not_found
