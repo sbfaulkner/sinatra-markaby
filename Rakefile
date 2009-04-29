@@ -4,10 +4,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
     s.name = "sinatra-markaby"
-    s.summary = %Q{Sinatra extension to add support for html rendering with Markaby templates.}
+    s.summary = %Q{Sinatra plugin to enable markaby (.mab) template rendering.}
     s.email = "brentf@unwwwired.net"
     s.homepage = "http://github.com/sbfaulkner/sinatra-markaby"
-    s.description = "Sinatra extension to add support for html rendering with Markaby templates."
+    s.description = "Sinatra plugin to enable markaby (.mab) template rendering."
     s.authors = ["S. Brent Faulkner"]
     s.add_dependency "markaby"
   end
