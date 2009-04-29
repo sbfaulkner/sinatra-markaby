@@ -21,7 +21,7 @@ using markaby templates.
 
   @@ template
   mab.html do
-    head { mab.title "Hello world" }
+    head { title "Hello world" }
     body do
       p "Hello world!!!!!"
     end
