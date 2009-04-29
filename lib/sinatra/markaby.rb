@@ -7,6 +7,7 @@ module Sinatra
     # Takes the name of a template to render as a Symbol and returns a String with the rendered output.
     #
     # Options for markaby may be specified in Sinatra using set :markaby, { ... }
+    # TODO: the options aren't actually used yet
     def markaby(template=nil, options={}, locals = {}, &block)
       options, template = template, nil if template.is_a?(Hash)
       template = lambda { block } if template.nil?

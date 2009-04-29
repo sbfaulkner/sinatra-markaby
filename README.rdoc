@@ -13,8 +13,6 @@ using markaby templates.
   require 'sinatra'
   require 'sinatra/markaby'
 
-  set :markaby, { :page_layout => :landscape }
-
   get '/' do
     markaby :template
   end
