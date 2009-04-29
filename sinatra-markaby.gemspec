@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["S. Brent Faulkner"]
   s.date = %q{2009-04-29}
-  s.description = %q{Sinatra extension to add support for html rendering with Markaby templates.}
+  s.description = %q{Sinatra plugin to enable markaby (.mab) template rendering.}
   s.email = %q{brentf@unwwwired.net}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -21,14 +21,14 @@ Gem::Specification.new do |s|
     "lib/sinatra/markaby.rb",
     "test/sinatra_markaby_test.rb",
     "test/test_helper.rb",
-    "test/views/hello.prawn"
+    "test/views/hello.mab"
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/sbfaulkner/sinatra-markaby}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
-  s.summary = %q{Sinatra extension to add support for html rendering with Markaby templates.}
+  s.summary = %q{Sinatra plugin to enable markaby (.mab) template rendering.}
   s.test_files = [
     "test/sinatra_markaby_test.rb",
     "test/test_helper.rb"
